@@ -1,6 +1,7 @@
 import { ProductosComponent } from './paginas/productos/productos.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { TestComponent } from './TestSErvices/test/test.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'crearcategorias', loadChildren: () => import('./admin/crearcategorias/crearcategorias.module').then(m => m.CrearcategoriasModule) },
   {path: '', redirectTo: '/inicio', pathMatch: 'full'},
   {path: '**', redirectTo: '/inicio', pathMatch: 'full'},
+
    ];
 
 @NgModule({

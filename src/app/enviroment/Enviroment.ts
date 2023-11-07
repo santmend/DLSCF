@@ -1,4 +1,4 @@
 export const urls =  {
-endPoint : "https://localhost:44366/"
+endPoint : "http://www.softwaredos.somee.com/"
 
 }

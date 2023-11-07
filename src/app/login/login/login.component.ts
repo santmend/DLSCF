@@ -44,6 +44,8 @@ export class LoginComponent implements OnInit {
         console.log("Respusta", data)
         if(data.success){
           this.rout.navigate(['inicio'])
+          console.log("Result", data.result)
+          localStorage.setItem("Token",data.result);
         }
       },error:(e) => {
         console.log("Error Consulta",e)

@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
 import { LoginI } from '../modelos/login.interface';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { urls } from '../enviroment/Enviroment';
 import {Observable} from 'rxjs';
+import { User } from '../modelos/User';
 
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class UserService {
 endPoint : string = urls.endPoint
 url : string = this.endPoint + "usuario/"
   constructor(private http : HttpClient) { }
-  Login(model : LoginI) : Observable<any>{
-    return this.http.post<any>(`${this.url}login`, model)
+  register(model : User) : Observable<User>{
+    return this.http.post<User>(`${this.url}registro`, model)
   }
 }
